@@ -1,15 +1,18 @@
 :root {
+  --purple-hard: #4F3381;
   --purple-color: #c678dd;
   --gray-medium: #282c34;
   --gray-hard: #16181d;
   --gray-light: #abb2bf;
   --white: #ffffff; 
   --blue-light: #61afef;
+  --color-yellow: #e5c07b;
+  --color-green: #56b6c2;
 }
 
 body {
   font-family: "Open Sans", sans-serif;
-  color: #272829;
+  color: var(--gray-medium);
 }
 
 a {
@@ -191,7 +194,7 @@ h6 {
   font-size: 24px;
   transition: all 0.4s;
   outline: none !important;
-  background-color: #149ddd;
+  background-color: var(--purple-hard);
   color: #fff;
   width: 40px;
   height: 40px;
@@ -250,6 +253,12 @@ h6 {
     font-size: 84px;
   }
 
+  @media (max-width: 770px) {
+    #hero h1 span {
+      font-size: 38px;
+    }
+  }
+
 #hero p {
   color: #fff;
   margin-bottom: 50px;
@@ -283,17 +292,16 @@ h6 {
   }
 }
 
-/*--------------------------------------------------------------
-# Sections General
---------------------------------------------------------------*/
 section {
   padding: 60px 0;
   overflow: hidden;
+  margin: 0 auto;
+  width: 75%;
 }
 
-.section-bg {
-  background: #f5f8fd;
-}
+/* .section-bg {
+  background: var(--gray-light);
+} */
 
 .section-title {
   padding-bottom: 30px;
@@ -305,31 +313,28 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #173b6c;
+  color: var(--purple-hard);
 }
 
-.section-title h2::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 50px;
-  height: 3px;
-  background: #149ddd;
-  bottom: 0;
-  left: 0;
-}
+  .section-title h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--purple-hard);
+    bottom: 0;
+    left: 0;
+  }
 
 .section-title p {
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }
 
-/*--------------------------------------------------------------
-# About
---------------------------------------------------------------*/
 .about .content h3 {
   font-weight: 700;
   font-size: 26px;
-  color: #173b6c;
+  color: var(--purple-hard);
 }
 
 .about .content ul {
@@ -350,12 +355,19 @@ section {
 .about .content ul i {
   font-size: 16px;
   margin-right: 5px;
-  color: #149ddd;
+  color: var(--purple-hard);
   line-height: 0;
 }
 
 .about .content p:last-child {
   margin-bottom: 0;
+}
+
+#skills {
+  padding: 60px 0;
+  border-radius: 25px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 /*--------------------------------------------------------------
@@ -443,7 +455,7 @@ section {
   width: 1px;
   height: 10px;
   transition: 0.9s;
-  background-color: #149ddd;
+  background-color: var(--color-green);
 }
 
 /*--------------------------------------------------------------
@@ -820,10 +832,19 @@ section {
   background-color: #149ddd;
 }
 
-/*--------------------------------------------------------------
-# Contact
---------------------------------------------------------------*/
+#logo-contact {
+  width: 180px;
+  margin: 0 auto;
+  display: block;
+}
+
+  #logo-contact img {
+    width: 100%;
+    margin: 0 auto;
+  }
+
 .contact {
+  padding-top: 130px;
   padding-bottom: 130px;
 }
 
@@ -831,16 +852,26 @@ section {
   padding: 30px;
   background: #fff;
   width: 100%;
-  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+  /* box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12); */
+}
+
+.contact .border-right {
+  border-right: solid var(--purple-hard) 2px;
+}
+
+@media (max-width: 990px) {
+  .contact .border-right {
+    border-right: none;
+  }
 }
 
 .contact .info i {
   font-size: 20px;
-  color: #149ddd;
+  color: var(--white);
+  background: var(--purple-hard);
   float: left;
   width: 44px;
   height: 44px;
-  background: #dff3fc;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -884,18 +915,6 @@ section {
   height: 36px;
   transition: 0.3s;
   margin-right: 10px;
-}
-
-.contact .info .social-links a:hover {
-  background: #149ddd;
-  color: #fff;
-}
-
-.contact .info .email:hover i,
-.contact .info .address:hover i,
-.contact .info .phone:hover i {
-  background: #149ddd;
-  color: #fff;
 }
 
 .contact .php-email-form {
