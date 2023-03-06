@@ -1,9 +1,0 @@
-{
-  "files": {
-    "style.css": "/static/styles/style.css",
-    "script.js": "/static/scripts/script.js",
-    "favicon.ico": "favicon.ico",
-    "index.html": "/index.html"
-  },
-  "entrypoints": ["static/styles/style.css", "static/scripts/script.js"]
-}
