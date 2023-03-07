@@ -41,6 +41,20 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 15px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  background-color: var(--purple-hard);
+}
+
 .back-to-top {
   position: fixed;
   visibility: hidden;
